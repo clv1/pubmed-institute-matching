@@ -1,0 +1,2 @@
+{ head -n 9887 ./input_data/xml_data/pubmed_data.xml && tail -n 2 ./input_data/xml_data/pubmed_data.xml; } > ./input_data/xml_data/sample_data.xml
+# { head -n 97 ./input_data/xml_data/pubmed_data.xml && tail -n 2 ./input_data/xml_data/pubmed_data.xml; } > ./input_data/xml_data/sample_article.xml

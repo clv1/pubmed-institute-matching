@@ -1,0 +1,42 @@
+./pubmed_pipeline/extract.py
+************* Module extract
+pubmed_pipeline/extract.py:11:0: C0103: Function name "get_s3_client" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+pubmed_pipeline/extract.py:15:4: C0103: Variable name "s3_client" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+pubmed_pipeline/extract.py:22:27: C0103: Argument name "s3_client" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+pubmed_pipeline/extract.py:22:75: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)
+pubmed_pipeline/extract.py:37:29: C0103: Argument name "s3_client" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+pubmed_pipeline/extract.py:37:61: C0103: Argument name "s3_folder_prefix" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+pubmed_pipeline/extract.py:11:0: W0612: Unused variable 'get_s3_client' (unused-variable)
+pubmed_pipeline/extract.py:37:0: W0612: Unused variable 'download_latest_xml_file' (unused-variable)
+
+-----------------------------------
+Your code has been rated at 5.86/10
+
+./pubmed_pipeline/transform.py
+************* Module transform
+pubmed_pipeline/transform.py:116:54: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)
+pubmed_pipeline/transform.py:186:60: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)
+pubmed_pipeline/transform.py:14:0: W0612: Unused variable 'PUBMED_DATA' (unused-variable)
+pubmed_pipeline/transform.py:15:0: W0612: Unused variable 'SAMPLE_PUBMED_DATA' (unused-variable)
+pubmed_pipeline/transform.py:27:0: W0612: Unused variable 'parse_xml' (unused-variable)
+pubmed_pipeline/transform.py:116:0: W0612: Unused variable 'assemble_articles_df' (unused-variable)
+
+-----------------------------------
+Your code has been rated at 8.49/10
+
+./pubmed_pipeline/load.py
+************* Module load
+pubmed_pipeline/load.py:15:0: W0612: Unused variable 'generate_output_files' (unused-variable)
+pubmed_pipeline/load.py:23:0: W0612: Unused variable 'upload_file' (unused-variable)
+
+-----------------------------------
+Your code has been rated at 9.00/10
+
+./pubmed_pipeline/pipeline.py
+************* Module pipeline
+pubmed_pipeline/pipeline.py:25:4: C0103: Variable name "s3" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+pubmed_pipeline/pipeline.py:12:0: W0612: Unused variable 'PUBMED_DATA' (unused-variable)
+
+-----------------------------------
+Your code has been rated at 9.29/10
+
