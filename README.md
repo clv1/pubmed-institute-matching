@@ -38,15 +38,13 @@ Our client - PharmaZer - have approached us to help them solve this problem all 
 
 ## Project Solution
 
-Eve heads the Immunology team at PharmaZer, acting not just as a lead researcher on key projects but also being responsible for the smooth running of the department, ensuring that work is as streamlined, organised, and cost-effective as possible.
-
-While Eve's short-term focus is collating research on Sjogren Syndrome, she'd ideally like to use the same techniques on other research areas in the future. A low-cost, repeatable tool that allows non-technical staff to quickly collate and organise research data on any topic would be of huge benefit to her work.
+A low-cost, repeatable tool that allows researchers to quickly collate and organise research data on any topic.
 
 The client has given us a dataset named PubMed which contains lists of published medical journals. Apart from the PubMed dataset, we also have access to the Global Research Identifier Database (GRID) datasets which contains the standard names and alias of multiple medical institutions. We can use the standardised GRID dataset to identify all the multiple occurrences of certain institutions with the PubMed Articles correctly.
 
 The project's final goal is to match the names of the institutions in the PubMed dataset to the 'source of truth' in the GRID datasets.
 
-This is essentially a 'record linkage' (aka 'data matching' or 'entity resolution') problem.
+This is essentially a 'record linkage' (aka 'data matching' or 'entity resolution') solution.
 
 ### Inputs
 
