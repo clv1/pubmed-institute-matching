@@ -1,13 +1,8 @@
-[![badge](./.github/badges/code_quality.svg)](./code_review/report.json)
-[![badge](./.github/badges/total_errors.svg)](./code_review/report.json)
-
-
-# Pubmed Institute Matching
 # (🚧 Under construction 🚧)
 
----
+# Pubmed Institute Matching
 
-# Problem
+# 📃 Problem
 
 A client from the pharmaceutical industry need to track all published research on a particular topic as part of their R&D efforts. They need to collate and analyse research papers from various research institutions to understand a given disease comprehensively and develop new and effective treatments.
 
@@ -55,7 +50,7 @@ This is essentially a 'record linkage' (aka 'data matching' or 'entity resolutio
 
 ### Inputs
 
-We will be working with (and matching across) two datasets:
+We work with (and match across) two datasets:
 
 1. Data retrieved from the [PubMed](https://pubmed.ncbi.nlm.nih.gov/about/) containing search results for the term [Sjögren's Syndrome](https://pubmed.ncbi.nlm.nih.gov/?term=sjogren+syndrome). This dataset is comprised of a single file `pubmed_result_sjogren.xml` which contains info on:
 
@@ -94,13 +89,13 @@ We will be working with (and matching across) two datasets:
 
 ### Outputs
 
-As you'll learn in these challenges, XML is a deeply nested file format. The main goal of this project is to navigate the PubMed XML file, extracting only relevant fields (see below), enriching and cleaning them using regular expressions and other tools, and finally performing data matching in the affiliations, returning a single csv file.
+XML is a deeply nested file format. The main goal of this project is to navigate the PubMed XML file, extracting only relevant fields (see below), enriching and cleaning them using regular expressions and other tools, and finally performing data matching in the affiliations, returning a single csv file.
 
 A specific article can have many authors, and each of these authors can belong to multiple institutions. In order to present this type of nested structure in a flat csv file you will need to 'un-nest' or 'flatten' the data to obtain a single row per affiliation.
 
 ![Flattened author-affiliation structure](/relative/images/author_affiliation_flattened_structure.png?raw=true 'Flattened author-affiliation structure')
 
-Once in this format you'll need to clean and enrich it (details in challenges 2-4). The resulting csv should contain the following columns:
+Once in this format it's cleaned and enriched. The resulting csv contains the following columns:
 
 - Article PMID
 - Article title
@@ -118,13 +113,20 @@ Once in this format you'll need to clean and enrich it (details in challenges 2-
 - Affiliation country
 - Affiliation GRID identifier
 
-## 🛠️ Setup
-
+# 🛠️ Setup
 
 ### Environment variables
+Valid AWS credentials:
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
 
+AWS S3 download and upload bucket names (and any further path details if they exist):
+- `DOWNLOAD_BUCKET=sigma-pharmazer-input`
+- `DOWN_BUCKET_PREFIX=c9-kevin-input`
+- `UPLOAD_BUCKET=sigma-pharmazer-output`
+- `UP_BUCKET_PREFIX=c9-kevin-output`
 
-
+ <!-- OUTPUT_FILE_NAME='./output_data/matched_institutes.csv' -->
 
 ## Data Observations
 
@@ -163,11 +165,10 @@ The data is parsed in python using python's built-in `xml` library (in particula
     it is more probable they match with the same true institute regardless of the entity chosen (given the use of a suitably high similarity threshold).
   - At similarity threshold `0.85`, this method produced no erroneous.
 
-# levenshtein worked best + explain why chosen
+-  levenshtein worked best + explain why chosen
+- list all the files to download and gitignore the rest
 
-# list all the files to download and gitignore the rest
 
-
-# Running the project
+# 🛫 Running the project
 
 
